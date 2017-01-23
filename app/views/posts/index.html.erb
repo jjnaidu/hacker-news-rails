@@ -1,0 +1,17 @@
+<h1>News</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Author</th>
+  </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.body %></td>
+      <td><%= post.author %></td>
+    </tr>
+  <% end %>
+</table>
