@@ -8,4 +8,14 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+
+  # get '/posts' => 'posts#index'
+  # get '/posts/new' => 'posts#new'
+  # post '/posts' => 'posts#create'
+
+  resources :posts
+
+  # resources :users do
+  #   resources :posts
+  # end
 end
