@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   # get '/posts/new' => 'posts#new'
   # post '/posts' => 'posts#create'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   # resources :users do
   #   resources :posts

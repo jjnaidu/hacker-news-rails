@@ -1,0 +1,10 @@
+<h1>New Comment</h1>
+
+<%= form_for :comments, url: "/posts/#{@post.id}/comments" do |f| %>
+
+  Comment: <%= f.text_field :comment %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :post_id %>
+  <%= f.submit "Submit" %>
+
+<% end %>

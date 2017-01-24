@@ -1,7 +1,9 @@
 <h1>News</h1>
 
+<%= link_to 'New Post', new_post_path %>
 <table>
   <tr>
+    <th></th>
     <th>Title</th>
     <th>Text</th>
     <th>Author</th>
@@ -9,9 +11,11 @@
 
   <% @posts.each do |post| %>
     <tr>
+      <td><%= post.id %></td>
       <td><%= post.title %></td>
       <td><%= post.body %></td>
-      <td><%= post.user_id %></td>
+      <td><%= post.user.username %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
     </tr>
   <% end %>
 </table>
