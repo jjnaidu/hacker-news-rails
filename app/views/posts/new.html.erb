@@ -1,0 +1,10 @@
+<h1>New Post</h1>
+
+<%= form_for :post, url: '/posts' do |f| %>
+
+  Title: <%= f.text_field :title %>
+  Body: <%= f.text_field :body %>
+  <%= f.hidden_field :user_id %>
+  <%= f.submit "Submit" %>
+
+<% end %>
